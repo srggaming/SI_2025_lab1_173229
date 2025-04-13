@@ -32,6 +32,8 @@ Chekori 1-8: Postavuvanje na repozitorium
    git add README.md
    git commit -m "Initial commit"
    
+   Pokasno promeneto samo vo Ljube Saragjinov 173229
+
    Kreirana e README.md datoteka so potrebnite informacii i napraveno e initial commit.
 
 7. Dodavanje na Java kod vo lokalniot repozitorium

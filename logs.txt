@@ -1,0 +1,15 @@
+*   d9eb743 Merge branch '7777777-count-tasks-per-category'
+|\  
+| * 10ccc63 Implement countTasksPerCategory method
+* |   bf2b967 Merge pull request #10 from srggaming/2-find-all-completed-tasks
+|\ \  
+| * | b89941b Implement getCompletedTasks method
+| |/  
+* |   9e6002e Merge pull request #11 from srggaming/1-remove-a-task-by-name
+|\ \  
+| |/  
+|/|   
+| * ef212d5 Implement removeTask method
+|/  
+* 9ff9b48 Add starter code
+* a6fb423 Initial commit

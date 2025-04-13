@@ -1,0 +1,186 @@
+Laboratoriska vezba po Softversko inzenerstvo 2024/2025
+Ljube Saragjinov, 173229
+
+Chekori 1-8: Postavuvanje na repozitorium
+
+1. Instalacija na Git i kreiranje na profil na GitHub
+   Instaliran e Git i koristen e postoechkiot profil na GitHub.
+
+2. Promenuvanje na imeto na glavnata granka na GitHub vo "master"
+   Na https://github.com/settings/repositories e promeneto imeto na glavnata granka vo "master".
+
+3. Kreiranje na oddalecen (remote) repozitorium na GitHub
+   Kreiran e nov privaten repozitorium imenovan kako "SI_2025_lab1_173229".
+
+4. Kreiranje na lokalen repozitorium
+   Komanda: mkdir SI_2025_lab1_173229
+   Komanda: cd SI_2025_lab1_173229
+   Komanda: git init
+   Kreiran e lokalen direktorium i inicijaliziran e Git vo nego.
+
+5. Povrzuvanje na lokalniot repozitorium so oddalecheniot repozitorium
+   Komanda: git remote add origin https://github.com/srggaming/SI_2025_lab1_173229.git
+   So ova se povrzuva lokalniot repozitorium so oddalecheniot na GitHub.
+
+6. Dodavanje na README.md datoteka
+   Komandi:
+   echo "# SI_2025_lab1_173229" > README.md
+   echo "" >> README.md
+   echo "Ime: Ljube" >> README.md
+   echo "Prezime: Saragjinov" >> README.md
+   echo "Indeks: 173229" >> README.md
+   git add README.md
+   git commit -m "Initial commit"
+   
+   Kreirana e README.md datoteka so potrebnite informacii i napraveno e initial commit.
+
+7. Dodavanje na Java kod vo lokalniot repozitorium
+   Komandi:
+   touch SI2025Lab1Main.java
+   nano SI2025Lab1Main.java (i vnesen e kodot)
+   git add SI2025Lab1Main.java
+   git commit -m "Add starter code"
+   
+   Kreirana e Java datoteka i dodaden e starter kodot vo nea.
+
+8. Sinhronizacija na grankata master so oddalecheniot repozitorium
+   Komanda: git push -u origin master
+   Se sinhronizira lokalnata master granka so oddalecheniot repozitorium.
+
+Chekori 9-12: Upravuvanje so IT proekt
+
+9. Kreiranje na GitHub Project
+   Na GitHub repozitoriumot kreiran e nov proekt od tip Kanban imenuvaan "SI2025".
+
+10. Dodavanje na issues vo Backlog
+    Dodadeni se site 9 issues vo Backlog kolona:
+    - Remove a task by name
+    - Find all completed tasks
+    - List tasks sorted by name
+    - Sort tasks by priority
+    - Filter tasks by category
+    - Find the highest-priority unfinished task
+    - Count tasks per category
+    - Mark a task as completed by name
+    - Mark all tasks in a category as completed
+    
+    Site se povrzani so repozitoriumot.
+
+11. Izbor na tri features za implementacija
+    Izbrani se slednive tri issues:
+    - Find all completed tasks
+    - Remove a task by name
+    - Count tasks per category
+    
+    Ovie issues se premesteni vo Ready kolona.
+
+12. Generiranje na granki za izbranite issues
+    Za sekoe od izbranite issues e generirana po edna granka:
+    - 2-find-all-completed-tasks
+    - 1-remove-a-task-by-name
+    - 7-count-tasks-per-category
+
+Chekori 13-24: Softverski razvoj so koristenje na Git sistem za kontrola na verzii
+
+13. Prezemanje na grankite od oddalecheniot repozitorium
+    Komanda: git fetch origin
+    So ova se prezemeni site granki sozdadeni na GitHub.
+
+14-18. Implementacija na prvata funkcionalnost (Find all completed tasks)
+    Komanda: git checkout 2-find-all-completed-tasks
+    Se prefrlam na grankata za prviot issue.
+    
+    Implementirana e funkcijata:
+    public List<Task> getCompletedTasks() {
+        List<Task> completedTasks = new ArrayList<>();
+        for (Task task : tasks) {
+            if (task.isCompleted()) {
+                completedTasks.add(task);
+            }
+        }
+        return completedTasks;
+    }
+    
+    Komanda: git add SI2025Lab1Main.java
+    Komanda: git commit -m "Implement getCompletedTasks method"
+    Komanda: git push origin 2-find-all-completed-tasks
+    
+    Kreiran e pull request za spoj na grankata vo master.
+
+14-18. Implementacija na vtorata funkcionalnost (Remove a task by name)
+    Komanda: git checkout 1-remove-a-task-by-name
+    Se prefrlam na grankata za vtoriot issue.
+    
+    Implementirana e funkcijata:
+    public void removeTask(String name) {
+        tasks.removeIf(task -> task.getName().equals(name));
+    }
+    
+    Komanda: git add SI2025Lab1Main.java
+    Komanda: git commit -m "Implement removeTask method"
+    Komanda: git push origin 1-remove-a-task-by-name
+    
+    Kreiran e pull request za spoj na grankata vo master.
+
+14-18. Implementacija na tretata funkcionalnost (Count tasks per category)
+    Komanda: git checkout 7-count-tasks-per-category
+    Se prefrlam na grankata za tretiot issue.
+    
+    Implementirana e funkcijata:
+    public Map<String, Integer> countTasksPerCategory() {
+        Map<String, Integer> categoryCount = new HashMap<>();
+        for (Task task : tasks) {
+            String category = task.getCategory();
+            categoryCount.put(category, categoryCount.getOrDefault(category, 0) + 1);
+        }
+        return categoryCount;
+    }
+    
+    Komanda: git add SI2025Lab1Main.java
+    Komanda: git commit -m "Implement countTasksPerCategory method"
+    Komanda: git push origin 7-count-tasks-per-category
+    
+    Kreiran e pull request za spoj na grankata vo master.
+
+20. Odobruvanje na dva pull requests
+    Odobreni se i spoeni se pull requests za:
+    - Find all completed tasks
+    - Remove a task by name
+    
+    Ova e napraveno preku GitHub interfejsot.
+
+21. Proverka na GitHub proekt
+    Zabelezhano e deka issues-ite povrzani so spoite granki avtomatski se prefrleni vo fazata Done.
+
+22. Spoj na tretata granka lokalno
+    Komanda: git checkout master
+    Komanda: git merge 7-count-tasks-per-category
+    
+    Ne se sluchija konflikti pri izvrsuvanje na naredbata.
+    Koristena e 'ort' strategija za spoj.
+    
+    Rezultat:
+    Auto-merging SI2025Lab1Main.java
+    Merge made by the 'ort' strategy.
+    SI2025Lab1Main.java | 8 ++++++--
+    1 file changed, 6 insertions(+), 2 deletions(-)
+
+23. Sinhroniziranje na master so oddalecheniot repozitorium
+    Komanda: git push origin master
+    Se sinhronizira lokalnata master granka so oddalecheniot repozitorium.
+
+24. Proverka na GitHub
+    Zabelezhano e deka pull request-ot za tretata granka e zatvoren, a soodvetniot issue e premesten vo fazata Done.
+
+Chekori 25-26: Finaliziranje na vezhbata
+
+25. Dodavanje na logs.txt i dokumentacija
+    Komanda: git log --oneline --graph --all > logs.txt
+    Komanda: git add logs.txt
+    
+    Kreirana e dokumentacija 173229.txt so site potrebni informacii.
+    Komanda: git add 173229.txt
+    Komanda: git commit -m "Final commit"
+
+26. Sinhroniziranje na master so oddalecheniot repozitorium
+    Komanda: git push origin master

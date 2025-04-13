@@ -187,3 +187,33 @@ Chekori 25-26: Finaliziranje na vezhbata
 26. Sinhroniziranje na master so oddalecheniot repozitorium
     Komanda: git push origin master
 Napomena: Pri merge-ot na grankata 7-count-tasks-per-category doslo do tehnichka greshka i poraka na commit-ot e prikhazhana kako "7777777-count-tasks-per-category". Funkcionalnosta e pravilno implementirana.
+
+Del 3: Forking git workflow
+
+27. Kreiranje na fork od repozitoriumot
+   Poseten e repozitoriumot https://github.com/stefanandonov/SI_2025_lab1_151020
+   Kliknato e na kopcheto "Fork" i kreiran e fork na mojot GitHub profil.
+
+28. Kloniranje na fork-ot
+   Komanda: git clone https://github.com/srggaming/SI_2025_lab1_151020.git
+   Komanda: cd SI_2025_lab1_151020
+   
+   So ova se klonira fork-ot na mojot lokalen kompjuter.
+
+29. Dodavanje na datoteka
+   Komanda: echo "Ljube Saragjinov" > 173229.txt
+   Komanda: git add 173229.txt
+   Komanda: git commit -m "Add file"
+   
+   Kreirana e datoteka so mojot broj na indeks i dodadeno e moeto ime vo nea.
+
+30. Sinhronizacija so oddalecheniot repozitorium
+   Komanda: git push origin master
+   
+   Se sinhronizira lokalnata master granka so oddalecheniot repozitorium.
+
+31-32. Kreiranje na pull request
+   Otvoram go fork repozitoriumot na mojot GitHub profil.
+   Kliknam na "Contribute" -> "Open pull request"
+   Vnesuvam go samo brojot na mojot indeks (173229) kako naslov na pull request-ot.
+   Kliknam na "Create pull request".

@@ -213,7 +213,7 @@ Del 3: Forking git workflow
    Se sinhronizira lokalnata master granka so oddalecheniot repozitorium.
 
 31-32. Kreiranje na pull request
-   Otvoram go fork repozitoriumot na mojot GitHub profil.
+   Go otvaram fork repozitoriumot na mojot GitHub profil.
    Kliknam na "Contribute" -> "Open pull request"
-   Vnesuvam go samo brojot na mojot indeks (173229) kako naslov na pull request-ot.
+   Go otvaram samo brojot na mojot indeks (173229) kako naslov na pull request-ot.
    Kliknam na "Create pull request".

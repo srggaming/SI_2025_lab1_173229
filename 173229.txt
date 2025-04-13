@@ -184,3 +184,4 @@ Chekori 25-26: Finaliziranje na vezhbata
 
 26. Sinhroniziranje na master so oddalecheniot repozitorium
     Komanda: git push origin master
+Napomena: Pri merge-ot na grankata 7-count-tasks-per-category doslo do tehnichka greshka i poraka na commit-ot e prikhazhana kako "7777777-count-tasks-per-category". Funkcionalnosta e pravilno implementirana.

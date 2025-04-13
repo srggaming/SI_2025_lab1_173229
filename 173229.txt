@@ -26,9 +26,9 @@ Chekori 1-8: Postavuvanje na repozitorium
    Komandi:
    echo "# SI_2025_lab1_173229" > README.md
    echo "" >> README.md
-   echo "Ime: Ljube" >> README.md
-   echo "Prezime: Saragjinov" >> README.md
-   echo "Indeks: 173229" >> README.md
+   echo "Име: Ljube" >> README.md
+   echo "Презиме: Saragjinov" >> README.md
+   echo "Индекс: 173229" >> README.md
    git add README.md
    git commit -m "Initial commit"
    
